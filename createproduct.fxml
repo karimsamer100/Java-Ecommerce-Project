@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="652.0" style="-fx-background-color: #7EBFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.createproductController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1E90FF;" AnchorPane.bottomAnchor="475.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+
+        <Label layoutX="150.0" layoutY="25.0" text="Create New Product" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+
+        <GridPane layoutX="50.0" layoutY="150.0" hgap="10" vgap="15" prefWidth="550.0">
+            <children>
+                <!-- Product Name -->
+                <Label text="Product Name:" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="nameField" prefWidth="300.0" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <!-- Price -->
+                <Label text="Price:" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="priceField" prefWidth="300.0" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <!-- Description -->
+                <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="descriptionField" prefWidth="300.0" prefHeight="100.0" wrapText="true" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                <!-- Stock -->
+                <Label text="Stock:" GridPane.rowIndex="3" GridPane.columnIndex="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="stockField" prefWidth="300.0" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                <!-- Category -->
+                <Label text="Category:" GridPane.rowIndex="4" GridPane.columnIndex="0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="categoryComboBox" prefWidth="300.0" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+
+        <!-- Buttons -->
+        <HBox spacing="20" alignment="CENTER" layoutX="176.0" layoutY="450.0">
+            <Button fx:id="createButton" onAction="#handleCreate" text="Create Product" prefWidth="150.0" prefHeight="40.0" />
+            <Button fx:id="backButton" onAction="#handleBack" text="Back" prefWidth="150.0" prefHeight="40.0" />
+        </HBox>
+    </children>
+</AnchorPane>

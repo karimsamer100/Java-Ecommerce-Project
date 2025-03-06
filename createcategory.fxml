@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="550.0" prefWidth="652.0" style="-fx-background-color: #7EBFFF;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxapplication3.CreateCategoryController">
+
+    <children>
+        <!-- Header -->
+        <AnchorPane prefHeight="75.0" prefWidth="652.0" style="-fx-background-color: #1E90FF;">
+            <children>
+                <Label layoutX="226.0" layoutY="20.0" text="Create New Category" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Main Content -->
+        <VBox layoutX="50.0" layoutY="100.0" spacing="20.0">
+            <children>
+                <!-- Existing Categories -->
+                <Label text="Existing Categories:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <ListView fx:id="categoriesListView" prefHeight="150.0" prefWidth="300.0" />
+
+                <!-- New Category Form -->
+                <Label text="Add New Category:" style="-fx-font-weight: bold;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <GridPane vgap="10" hgap="10">
+                    <children>
+                        <Label text="Category Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="categoryNameField" prefWidth="200.0"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextArea fx:id="descriptionArea" prefHeight="80.0" prefWidth="200.0"
+                                  wrapText="true" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                    </children>
+                </GridPane>
+
+                <HBox spacing="20.0">
+                    <children>
+                        <Button fx:id="createButton" onAction="#handleCreate" prefWidth="140.0"
+                                style="-fx-background-color: #4CAF50;" text="Create Category" textFill="WHITE" />
+
+                        <Button fx:id="backButton" onAction="#handleBack" prefWidth="140.0"
+                                text="Back to Admin Panel" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #7EBFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication3.ViewUsersController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1E90FF;" AnchorPane.bottomAnchor="475.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="10.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../Downloads/ecommerce.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="150.0" layoutY="25.0" text="E-Commerce" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="224.0" layoutY="101.0" text="System Users" underline="true">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+
+        <VBox layoutX="20.0" layoutY="140.0" spacing="20.0">
+            <!-- Customers Section -->
+            <Label style="-fx-font-weight: bold" text="Customers">
+                <font>
+                    <Font size="16.0" />
+                </font>
+                <effect>
+                    <DropShadow>
+                        <color>
+                            <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+            <VBox fx:id="customersVBox" spacing="10.0" />
+
+            <!-- Admins Section -->
+            <Label style="-fx-font-weight: bold" text="Administrators">
+                <font>
+                    <Font size="16.0" />
+                </font>
+                <effect>
+                    <DropShadow>
+                        <color>
+                            <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Label>
+            <VBox fx:id="adminsVBox" spacing="10.0" />
+        </VBox>
+      <Button layoutX="444.0" layoutY="468.0" mnemonicParsing="false" text="Back to main" onAction="#gotomain">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

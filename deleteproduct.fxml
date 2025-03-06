@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="550.0" prefWidth="652.0" style="-fx-background-color: #7EBFFF;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javafxapplication3.DeleteProductController">
+
+    <children>
+        <!-- Header -->
+        <AnchorPane prefHeight="75.0" prefWidth="652.0" style="-fx-background-color: #1E90FF;">
+            <children>
+                <Label layoutX="226.0" layoutY="20.0" text="Delete Product" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Main Content -->
+        <VBox layoutX="50.0" layoutY="100.0" spacing="20.0">
+            <children>
+                <Label text="Select Product to Delete:">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <ComboBox fx:id="productComboBox" prefWidth="300.0" />
+
+                <TextArea fx:id="productDetailsArea" editable="false" prefHeight="150.0" prefWidth="300.0"
+                          wrapText="true" promptText="Product details will appear here..." />
+
+                <HBox spacing="20.0">
+                    <children>
+                        <Button fx:id="deleteButton" onAction="#handleDelete" prefWidth="140.0"
+                                style="-fx-background-color: #ff4444;" text="Delete Product" textFill="WHITE" />
+
+                        <Button fx:id="backButton" onAction="#handleBack" prefWidth="140.0"
+                                text="Back to Admin Panel" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
